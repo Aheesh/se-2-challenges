@@ -79,7 +79,9 @@ describe("🚩 Challenge 3: 🎲 Dice Game", function () {
       console.log("2");
 
       const diceGameAddress = await diceGame.getAddress();
-      console.log("3");
+      console.log("3", diceGameAddress);
+      const riggedRollAddress = await riggedRoll.getAddress();
+      console.log("4", riggedRollAddress);
 
       expect(await riggedRoll.diceGame()).to.equal(diceGameAddress);
     });
